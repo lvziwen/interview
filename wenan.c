@@ -42,6 +42,10 @@ int main()
 	int day;
 	printf("Input month and day:");
 	scanf("%d,%d", &month, &day);
-	printf("The day is %dth day of the year.\n", getdays(month, day));
+	int days = getdays(month,day);
+	if(days > 0)
+		printf("The day is %dth day of the year.\n", days);
+	else
+		return -1;
 	return 0;
 }
